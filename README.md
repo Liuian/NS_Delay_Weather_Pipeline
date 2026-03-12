@@ -64,3 +64,4 @@
 - NS: https://apiportal.ns.nl
     1. Register
     2. `API Products` -> `Ns-App` -> `Subscribe` -> `Profile` -> Get Primary/Secondary key
+    3. Extract data using `extract_ns.py`

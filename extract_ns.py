@@ -1,5 +1,9 @@
+import os
+from dotenv import load_dotenv
 import requests
 import json
+
+load_dotenv()
 
 def fetch_ns_departures(station_code, api_key):
     """
@@ -40,8 +44,8 @@ def fetch_ns_departures(station_code, api_key):
 # 程式執行起點 (Main)
 # ==========================================
 if __name__ == "__main__":
-    # 這裡先暫時把 API Key 寫死測試，之後我們會教你怎麼隱藏它
-    MY_NS_API_KEY = "e5b885d550aa480e88630b10b78e03ba" 
+    MY_NS_API_KEY = os.getenv("MY_NS_API_KEY")
+
     STATION = "UT" # Utrecht Centraal 的代碼
     
     # 呼叫我們寫好的 Function
