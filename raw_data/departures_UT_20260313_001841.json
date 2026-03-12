@@ -1,0 +1,559 @@
+{
+    "payload": {
+        "source": "PPV",
+        "departures": [
+            {
+                "direction": "Breukelen",
+                "name": "NS  7384",
+                "plannedDateTime": "2026-03-13T00:19:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:19:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "14",
+                "actualTrack": "14",
+                "product": {
+                    "number": "7384",
+                    "categoryCode": "SPR",
+                    "shortCategoryName": "NS Sprinter",
+                    "longCategoryName": "Sprinter",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "SPR",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400613",
+                        "mediumName": "Zuilen"
+                    },
+                    {
+                        "uicCode": "8400419",
+                        "mediumName": "Maarssen"
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "ON_STATION"
+            },
+            {
+                "direction": "Amersfoort Centraal",
+                "name": "NS  5689",
+                "plannedDateTime": "2026-03-13T00:20:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:20:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "4",
+                "actualTrack": "4",
+                "product": {
+                    "number": "5689",
+                    "categoryCode": "SPR",
+                    "shortCategoryName": "NS Sprinter",
+                    "longCategoryName": "Sprinter",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "SPR",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400620",
+                        "mediumName": "Overvecht"
+                    },
+                    {
+                        "uicCode": "8400114",
+                        "mediumName": "Bilthoven"
+                    },
+                    {
+                        "uicCode": "8400179",
+                        "mediumName": "Den Dolder"
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "ON_STATION"
+            },
+            {
+                "direction": "'s-Hertogenbosch",
+                "name": "NS  6091",
+                "plannedDateTime": "2026-03-13T00:20:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:20:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "21",
+                "actualTrack": "21",
+                "product": {
+                    "number": "6091",
+                    "categoryCode": "SPR",
+                    "shortCategoryName": "NS Sprinter",
+                    "longCategoryName": "Sprinter",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "SPR",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400606",
+                        "mediumName": "Vaartsche Rijn"
+                    },
+                    {
+                        "uicCode": "8400623",
+                        "mediumName": "Lunetten"
+                    },
+                    {
+                        "uicCode": "8400340",
+                        "mediumName": "Houten"
+                    },
+                    {
+                        "uicCode": "8400244",
+                        "mediumName": "Geldermalsen"
+                    }
+                ],
+                "messages": [
+                    {
+                        "message": "Achterste deel blijft achter",
+                        "style": "INFO"
+                    }
+                ],
+                "departureStatus": "ON_STATION"
+            },
+            {
+                "direction": "Zwolle",
+                "name": "NS   689",
+                "plannedDateTime": "2026-03-13T00:21:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:21:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "12",
+                "actualTrack": "12",
+                "product": {
+                    "number": "689",
+                    "categoryCode": "IC",
+                    "shortCategoryName": "NS Intercity",
+                    "longCategoryName": "Intercity",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "IC",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400055",
+                        "mediumName": "Amersfoort C."
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "ON_STATION"
+            },
+            {
+                "direction": "Amsterdam Centraal",
+                "name": "NS  2986",
+                "plannedDateTime": "2026-03-13T00:24:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:24:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "5",
+                "actualTrack": "7",
+                "product": {
+                    "number": "2986",
+                    "categoryCode": "IC",
+                    "shortCategoryName": "NS Intercity",
+                    "longCategoryName": "Intercity",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "IC",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400057",
+                        "mediumName": "Amstel"
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "INCOMING"
+            },
+            {
+                "direction": "Hilversum",
+                "name": "NS  4988",
+                "plannedDateTime": "2026-03-13T00:24:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:24:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "2",
+                "actualTrack": "2",
+                "product": {
+                    "number": "4988",
+                    "categoryCode": "SPR",
+                    "shortCategoryName": "NS Sprinter",
+                    "longCategoryName": "Sprinter",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "SPR",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400620",
+                        "mediumName": "Overvecht"
+                    },
+                    {
+                        "uicCode": "8400327",
+                        "mediumName": "Holl. Rading"
+                    },
+                    {
+                        "uicCode": "8400570",
+                        "mediumName": "Sportpark"
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "ON_STATION"
+            },
+            {
+                "direction": "Leiden Centraal",
+                "recognizableDestination": {
+                    "code": "SHL",
+                    "name": "Schiphol Airport ✈"
+                },
+                "name": "NS  3186",
+                "plannedDateTime": "2026-03-13T00:26:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:26:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "7",
+                "actualTrack": "5",
+                "product": {
+                    "number": "3186",
+                    "categoryCode": "IC",
+                    "shortCategoryName": "NS Intercity",
+                    "longCategoryName": "Intercity",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "IC",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400074",
+                        "mediumName": "Bijlmer ArenA"
+                    },
+                    {
+                        "uicCode": "8400061",
+                        "mediumName": "Amsterdam Zuid"
+                    },
+                    {
+                        "uicCode": "8400561",
+                        "mediumName": "Schiphol Airport"
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "INCOMING"
+            },
+            {
+                "direction": "Leiden Centraal",
+                "name": "NS  6788",
+                "plannedDateTime": "2026-03-13T00:26:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:27:38+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "20",
+                "actualTrack": "20",
+                "product": {
+                    "number": "6788",
+                    "categoryCode": "SPR",
+                    "shortCategoryName": "NS Sprinter",
+                    "longCategoryName": "Sprinter",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "SPR",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400702",
+                        "mediumName": "Woerden"
+                    },
+                    {
+                        "uicCode": "8400121",
+                        "mediumName": "Bodegraven"
+                    },
+                    {
+                        "uicCode": "8400053",
+                        "mediumName": "Alphen a/d Rijn"
+                    },
+                    {
+                        "uicCode": "8400384",
+                        "mediumName": "Lammenschans"
+                    }
+                ],
+                "messages": [
+                    {
+                        "message": "Stopt niet in Leidsche Rijn, Terwijde, Vleuten",
+                        "style": "INFO"
+                    }
+                ],
+                "departureStatus": "INCOMING"
+            },
+            {
+                "direction": "Rotterdam Centraal",
+                "name": "NS  2886",
+                "plannedDateTime": "2026-03-13T00:33:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:33:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "9",
+                "actualTrack": "9",
+                "product": {
+                    "number": "2886",
+                    "categoryCode": "IC",
+                    "shortCategoryName": "NS Intercity",
+                    "longCategoryName": "Intercity",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "IC",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400258",
+                        "mediumName": "Gouda"
+                    },
+                    {
+                        "uicCode": "8400507",
+                        "mediumName": "Alexander"
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "INCOMING"
+            },
+            {
+                "direction": "Amersfoort Centraal",
+                "name": "NS  1791",
+                "plannedDateTime": "2026-03-13T00:37:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:37:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "12",
+                "actualTrack": "12",
+                "product": {
+                    "number": "1791",
+                    "categoryCode": "IC",
+                    "shortCategoryName": "NS Intercity",
+                    "longCategoryName": "Intercity",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "IC",
+                "cancelled": false,
+                "routeStations": [],
+                "messages": [],
+                "departureStatus": "INCOMING"
+            },
+            {
+                "direction": "Alkmaar",
+                "name": "NS  3086",
+                "plannedDateTime": "2026-03-13T00:39:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:39:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "5",
+                "actualTrack": "5",
+                "product": {
+                    "number": "3086",
+                    "categoryCode": "IC",
+                    "shortCategoryName": "NS Intercity",
+                    "longCategoryName": "Intercity",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "IC",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400057",
+                        "mediumName": "Amstel"
+                    },
+                    {
+                        "uicCode": "8400058",
+                        "mediumName": "Amsterdam C."
+                    },
+                    {
+                        "uicCode": "8400059",
+                        "mediumName": "Sloterdijk"
+                    },
+                    {
+                        "uicCode": "8400731",
+                        "mediumName": "Zaandam"
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "INCOMING"
+            },
+            {
+                "direction": "Houten Castellum",
+                "name": "NS  8891",
+                "plannedDateTime": "2026-03-13T00:41:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:41:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "21",
+                "actualTrack": "21",
+                "product": {
+                    "number": "8891",
+                    "categoryCode": "SPR",
+                    "shortCategoryName": "NS Sprinter",
+                    "longCategoryName": "Sprinter",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "SPR",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400606",
+                        "mediumName": "Vaartsche Rijn"
+                    },
+                    {
+                        "uicCode": "8400623",
+                        "mediumName": "Lunetten"
+                    },
+                    {
+                        "uicCode": "8400340",
+                        "mediumName": "Houten"
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "INCOMING"
+            },
+            {
+                "direction": "Amersfoort Centraal",
+                "name": "NS   591",
+                "plannedDateTime": "2026-03-13T00:51:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:51:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "12",
+                "actualTrack": "12",
+                "product": {
+                    "number": "591",
+                    "categoryCode": "IC",
+                    "shortCategoryName": "NS Intercity",
+                    "longCategoryName": "Intercity",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "IC",
+                "cancelled": false,
+                "routeStations": [],
+                "messages": [],
+                "departureStatus": "INCOMING"
+            },
+            {
+                "direction": "Arnhem Centraal",
+                "name": "NS  3091",
+                "plannedDateTime": "2026-03-13T00:53:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T00:53:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "19",
+                "actualTrack": "19",
+                "product": {
+                    "number": "3091",
+                    "categoryCode": "IC",
+                    "shortCategoryName": "NS Intercity",
+                    "longCategoryName": "Intercity",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "IC",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400182",
+                        "mediumName": "Driebergen-Zeist"
+                    },
+                    {
+                        "uicCode": "8400637",
+                        "mediumName": "De Klomp"
+                    },
+                    {
+                        "uicCode": "8400200",
+                        "mediumName": "Ede-Wageningen"
+                    }
+                ],
+                "messages": [],
+                "departureStatus": "INCOMING"
+            },
+            {
+                "direction": "Rotterdam Centraal",
+                "recognizableDestination": {
+                    "code": "SHL",
+                    "name": "Schiphol Airport ✈"
+                },
+                "name": "NS  1405",
+                "plannedDateTime": "2026-03-13T01:10:00+0100",
+                "plannedTimeZoneOffset": 60,
+                "actualDateTime": "2026-03-13T01:10:00+0100",
+                "actualTimeZoneOffset": 60,
+                "plannedTrack": "7",
+                "actualTrack": "7",
+                "product": {
+                    "number": "1405",
+                    "categoryCode": "IC",
+                    "shortCategoryName": "NS Intercity",
+                    "longCategoryName": "Intercity",
+                    "operatorName": "NS",
+                    "operatorCode": "NS",
+                    "type": "TRAIN"
+                },
+                "trainCategory": "IC",
+                "cancelled": false,
+                "routeStations": [
+                    {
+                        "uicCode": "8400058",
+                        "mediumName": "Amsterdam C."
+                    },
+                    {
+                        "uicCode": "8400561",
+                        "mediumName": "Schiphol Airport"
+                    },
+                    {
+                        "uicCode": "8400390",
+                        "mediumName": "Leiden C."
+                    },
+                    {
+                        "uicCode": "8400280",
+                        "mediumName": "Den Haag HS"
+                    }
+                ],
+                "messages": [
+                    {
+                        "message": "Stopt niet in Hilversum, Sloterdijk",
+                        "style": "INFO"
+                    }
+                ],
+                "departureStatus": "INCOMING"
+            }
+        ]
+    },
+    "links": {
+        "disruptions": {
+            "uri": "/disruptions/v3/station/UT"
+        }
+    },
+    "meta": {
+        "numberOfDisruptions": 1
+    }
+}

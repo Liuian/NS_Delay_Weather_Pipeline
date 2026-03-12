@@ -64,8 +64,14 @@
 - NS: https://apiportal.ns.nl
     1. Register
     2. `API Products` -> `Ns-App` -> `Subscribe` -> `Profile` -> Get Primary/Secondary key
-    3. Extract and Load data using `extract_ns.py`
-        - Hide ns API key
 - OpenWeather: https://openweathermap.org
     1. Register
-    2. `account name` -> `My API keys` ->
+    2. `account name` -> `My API keys` -> Get key
+
+## Step 2: Extract and Load data using `extract_ns.py`
+- Hide API key using `.env` and `.gitignore`
+
+## Step 3: Setup Google Cloud Platform(GCP)
+- `建立專案` -> `cloud storage` -> `create bucket` 
+- `IAM & Admin (IAM 與管理)` -> `Service Accounts (服務帳戶)` -> `選專案` -> `建立服務帳戶` -> `Keys (金鑰)` -> `Add Key` -> `Create new key`
+- `IAM` -> `授予存取權` -> `新稱主體`(data-uploader@ns-delay-weather-pipeline.iam.gserviceaccount.com) -> `儲存空間物件管理員 (Storage Object Admin)`

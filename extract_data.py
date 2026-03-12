@@ -3,6 +3,7 @@ import json
 import os
 from datetime import datetime
 from dotenv import load_dotenv
+from google.cloud import storage
 
 load_dotenv()
 
@@ -95,49 +96,62 @@ def save_data_to_local(data, data_type, location_id):
     print(f"📁 成功！資料已儲存至: {file_path}")
     return file_path
 
-# ==========================================
-# 程式執行起點 (Main)
-# ==========================================
+def upload_to_gcs(bucket_name, source_file_path, destination_blob_name, key_path):
+    """
+    將本地檔案上傳到 GCS。
+    """
+    if not source_file_path:
+        return
+
+    try:
+        # 1. 拿出我們的 JSON 鑰匙來跟 GCP 驗證身分
+        client = storage.Client.from_service_account_json(key_path)
+        
+        # 2. 找到我們的雲端水桶
+        bucket = client.bucket(bucket_name)
+        
+        # 3. 設定檔案傳上去之後要叫什麼名字 (Blob Name)
+        # 我們把它放在雲端的一個虛擬資料夾 'raw/' 裡面
+        blob = bucket.blob(f"raw/{destination_blob_name}")
+        
+        # 4. 開始上傳！
+        blob.upload_from_filename(source_file_path)
+        print(f"☁️ 成功！檔案已上傳至雲端: gs://{bucket_name}/raw/{destination_blob_name}")
+        
+    except Exception as e:
+        print(f"❌ 上傳到 GCS 時發生錯誤: {e}")
+
 if __name__ == "__main__":
-    # Fetch API key
     MY_NS_API_KEY = os.getenv("NS_API_KEY")
     WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
+    GCP_KEY_PATH = os.getenv("GCP_KEY_PATH")
+    GCP_BUCKET_NAME = os.getenv("GCP_BUCKET_NAME")
 
-    if not MY_NS_API_KEY or not WEATHER_API_KEY:
-        print("❌ 找不到 API Key！請檢查 .env 檔案。")
+    if not all([MY_NS_API_KEY, WEATHER_API_KEY, GCP_KEY_PATH, GCP_BUCKET_NAME]):
+        print("❌ 找不到某個環境變數！請檢查 .env 檔案。")
         exit()
     
-    STATION = "UT" # Utrecht Centraal 的代碼
-    CITY = "Utrecht"
-    COUNTRY = "NL"
+    STATION = "UT" 
+    # Utrecht 的經緯度
+    LAT = 52.0907
+    LON = 5.1214
     
-    # 1. Extract and Save NS data
+    print("🚀 啟動資料萃取與載入 (E -> L) 管線...\n")
+    
+    # --- 處理火車資料 ---
+    print("開始處理火車資料...")
     departures_data = fetch_ns_departures(STATION, MY_NS_API_KEY)
+    dept_file_path = save_data_to_local(departures_data, "departures", STATION)
     
-    if departures_data:
-        # 為了不要讓螢幕被幾千行資料淹沒，我們只印出「前 3 筆」班次來檢查
-        # NS 的班次資料通常包在 'payload' -> 'departures' 裡面
-        first_3_trains = departures_data.get('payload', {}).get('departures', [])[:3]
-        
-        print("--- 最新 3 筆出發班次 ---")
-        for train in first_3_trains:
-            direction = train.get('direction', '未知目的地')
-            planned_time = train.get('plannedDateTime', '未知時間')
-            train_category = train.get('trainCategory', '未知車種')
-            
-            print(f"🚆 車種: {train_category} | 開往: {direction} | 預計時間: {planned_time}")
-            
-        print("\n(你可以印出 print(departures_data) 來查看完整結構)")
-
-    if departures_data:
-        save_data_to_local(departures_data, "departures", STATION)
-
-    # 2. Extract and Save Weather data
-    weather_data = fetch_weather_by_coords(52.0907, 5.1214, WEATHER_API_KEY)   
-
-    if weather_data:
-        temp = weather_data.get('main', {}).get('temp', '未知')
-        desc = weather_data.get('weather', [{}])[0].get('description', '未知')
-        print(f"\n Location:{CITY} Weather:{desc} Temperature:{temp}°C")
-
-    save_data_to_local(weather_data, "weather", CITY)
+    if dept_file_path:
+        dept_filename = os.path.basename(dept_file_path)
+        upload_to_gcs(GCP_BUCKET_NAME, dept_file_path, dept_filename, GCP_KEY_PATH)
+    
+    # --- 處理天氣資料 ---
+    print("\n開始處理天氣資料...")
+    weather_data = fetch_weather_by_coords(LAT, LON, WEATHER_API_KEY)
+    weather_file_path = save_data_to_local(weather_data, "weather", "Utrecht")
+    
+    if weather_file_path:
+        weather_filename = os.path.basename(weather_file_path)
+        upload_to_gcs(GCP_BUCKET_NAME, weather_file_path, weather_filename, GCP_KEY_PATH)
