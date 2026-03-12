@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 5.1214,
+        "lat": 52.0907
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 10.14,
+        "feels_like": 9.09,
+        "temp_min": 9.39,
+        "temp_max": 10.55,
+        "pressure": 1009,
+        "humidity": 72,
+        "sea_level": 1009,
+        "grnd_level": 1009
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.24,
+        "deg": 179,
+        "gust": 9.39
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1773354270,
+    "sys": {
+        "type": 2,
+        "id": 2012962,
+        "country": "NL",
+        "sunrise": 1773295275,
+        "sunset": 1773337054
+    },
+    "timezone": 3600,
+    "id": 2745912,
+    "name": "Utrecht",
+    "cod": 200
+}

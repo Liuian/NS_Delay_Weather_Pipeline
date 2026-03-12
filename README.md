@@ -66,4 +66,6 @@
     2. `API Products` -> `Ns-App` -> `Subscribe` -> `Profile` -> Get Primary/Secondary key
     3. Extract and Load data using `extract_ns.py`
         - Hide ns API key
-        
+- OpenWeather: https://openweathermap.org
+    1. Register
+    2. `account name` -> `My API keys` ->
